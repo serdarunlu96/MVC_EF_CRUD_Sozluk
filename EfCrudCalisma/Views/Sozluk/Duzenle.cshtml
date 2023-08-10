@@ -1,0 +1,21 @@
+﻿@model Girdi
+@{
+    ViewData["Title"] = "Girdiyi Düzenle";
+}
+<h1>Girdiyi Düzenle</h1>
+
+<form method="post">
+    <input asp-for="Id" type="hidden" />
+    <div class="mb-3">
+        <label asp-for="Sozcuk" class="form-label">Sözcük</label>
+        <input asp-for="Sozcuk" type="text" class="form-control" />
+        <span asp-validation-for="Sozcuk" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Anlam" class="form-label">Anlam</label>
+        <input asp-for="Anlam" type="text" class="form-control" />
+        <span asp-validation-for="Anlam" class="text-danger"></span>
+    </div>
+    <button class="btn btn-primary">Kaydet</button>
+    <a asp-action="Index" class="btn btn-secondary">İptal</a>
+</form>

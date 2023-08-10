@@ -1,0 +1,20 @@
+﻿@model Girdi
+@{
+    ViewData["Title"] = "Yeni Girdi";
+}
+<h1>Yeni Girdi</h1>
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Sozcuk" class="form-label">Sözcük</label>
+        <input asp-for="Sozcuk" type="text" class="form-control" />
+        <span asp-validation-for="Sozcuk" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Anlam" class="form-label">Anlam</label>
+        <input asp-for="Anlam" type="text" class="form-control" />
+        <span asp-validation-for="Anlam" class="text-danger"></span>
+    </div>
+    <button class="btn btn-primary">Ekle</button>
+    <a asp-action="Index" class="btn btn-secondary">İptal</a>
+</form>

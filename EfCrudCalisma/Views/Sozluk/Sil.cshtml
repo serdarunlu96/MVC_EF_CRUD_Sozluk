@@ -1,0 +1,14 @@
+﻿@model Girdi
+@{
+    ViewData["Title"] = "Silme Onayı";
+}
+
+<h1>Silme Onayı</h1>
+
+<p>&quot;@Model.Sozcuk&quot; girdisi silinecektir. Onaylıyor musunuz?</p>
+
+<form asp-action="Sil" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button class="btn btn-danger">Evet, Sil</button>
+    <a asp-action="Index" class="btn btn-secondary">Vazgeç</a>
+</form>
